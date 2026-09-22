@@ -32,166 +32,165 @@ TEAL = "#2A9D8F"
 
 
 # =========================================================
+# =========================================================
 # CUSTOM STYLING
 # =========================================================
 
 st.markdown(
-    f"""
+    """
     <style>
 
-    /* ------------------------------
-       MAIN PAGE
-    ------------------------------ */
-
-    .main {{
-        background-color: {LIGHT_BACKGROUND};
+    /* MAIN PAGE */
+    .main {
+        background-color: #F8FAFC;
         padding-top: 1.5rem;
-    }}
+    }
 
-    /* ------------------------------
-       SIDEBAR
-    ------------------------------ */
+    /* SIDEBAR */
+    [data-testid="stSidebar"] {
+        background-color: #F1F5F9;
+        border-right: 1px solid #CBD5E1;
+    }
 
-    [data-testid="stSidebar"] {{
-        background-color: {WHITE};
-        border-right: 1px solid {BORDER};
-    }}
+    [data-testid="stSidebar"] h2,
+    [data-testid="stSidebar"] h3 {
+        color: #0F172A !important;
+    }
 
-    [data-testid="stSidebar"] h2 {{
-        color: {SLATE};
-    }}
+    [data-testid="stSidebar"] label,
+    [data-testid="stSidebar"] p,
+    [data-testid="stSidebar"] span {
+        color: #0F172A;
+    }
 
-    [data-testid="stSidebar"] h3 {{
-        color: {DARK_EMERALD};
-    }}
+    /* SIDEBAR INPUTS */
+    [data-testid="stSidebar"] input {
+        color: #0F172A !important;
+        background-color: #FFFFFF !important;
+    }
 
-    /* ------------------------------
-       TITLE
-    ------------------------------ */
+    [data-testid="stSidebar"] [data-baseweb="input"] {
+        background-color: #FFFFFF !important;
+    }
 
-    .eyebrow {{
+    /* TITLES */
+    .eyebrow {
         font-size: 0.78rem;
         font-weight: 700;
         letter-spacing: 1.8px;
         text-transform: uppercase;
-        color: {EMERALD};
+        color: #047857;
         margin-bottom: 0.3rem;
-    }}
+    }
 
-    .hero-title {{
+    .hero-title {
         font-size: 2.7rem;
         font-weight: 750;
-        color: {SLATE};
+        color: #0F172A;
         margin-bottom: 0.3rem;
         letter-spacing: -1px;
-    }}
+    }
 
-    .hero-subtitle {{
+    .hero-subtitle {
         font-size: 1.05rem;
-        color: {SLATE_GRAY};
+        color: #475569;
         margin-bottom: 1.5rem;
-    }}
+    }
 
-    /* ------------------------------
-       SECTION TITLES
-    ------------------------------ */
-
-    .section-title {{
+    .section-title {
         font-size: 1.45rem;
         font-weight: 700;
-        color: {SLATE};
+        color: #0F172A;
         margin-top: 1.2rem;
         margin-bottom: 0.8rem;
-    }}
+    }
 
-    /* ------------------------------
-       METRIC CARDS
-    ------------------------------ */
-
-    [data-testid="stMetric"] {{
-        background-color: {WHITE};
-        border: 1px solid {BORDER};
-        border-left: 4px solid {EMERALD};
+    /* METRIC CARDS */
+    [data-testid="stMetric"] {
+        background-color: #FFFFFF;
+        border: 1px solid #CBD5E1;
+        border-left: 4px solid #047857;
         padding: 1rem;
         border-radius: 10px;
-        box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
-    }}
+        box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+    }
 
-    [data-testid="stMetricLabel"] {{
-        color: {SLATE_GRAY};
-    }}
+    [data-testid="stMetricLabel"] {
+        color: #475569 !important;
+    }
 
-    [data-testid="stMetricValue"] {{
-        color: {SLATE};
-    }}
+    [data-testid="stMetricValue"] {
+        color: #0F172A !important;
+    }
 
-    /* ------------------------------
-       INFORMATION CARD
-    ------------------------------ */
-
-    .info-card {{
+    /* INFORMATION CARD */
+    .info-card {
         padding: 1rem 1.2rem;
         border-radius: 10px;
-        border: 1px solid #BFE8DC;
-        background-color: {LIGHT_MINT};
-        color: {SLATE};
+        border: 1px solid #A7DCCF;
+        background-color: #ECFDF5;
+        color: #0F172A;
         margin-bottom: 1rem;
-    }}
+    }
 
-    /* ------------------------------
-       BUTTON
-    ------------------------------ */
+    .info-card strong {
+        color: #065F46;
+    }
 
-    div.stButton > button {{
-        background-color: {EMERALD};
-        color: white;
-        border: none;
+    /* BUTTON */
+    div.stButton > button {
+        background-color: #047857;
+        color: #FFFFFF !important;
+        border: 1px solid #047857;
         border-radius: 8px;
         font-weight: 650;
         padding: 0.55rem 1rem;
-    }}
+    }
 
-    div.stButton > button:hover {{
-        background-color: {DARK_EMERALD};
-        color: white;
-        border: none;
-    }}
+    div.stButton > button:hover {
+        background-color: #065F46;
+        border-color: #065F46;
+        color: #FFFFFF !important;
+    }
 
-    /* ------------------------------
-       DATAFRAME
-    ------------------------------ */
+    /* GENERAL TEXT */
+    .stMarkdown,
+    .stText,
+    p {
+        color: #0F172A;
+    }
 
-    [data-testid="stDataFrame"] {{
-        border: 1px solid {BORDER};
+    /* CAPTIONS */
+    .stCaption,
+    [data-testid="stCaptionContainer"] {
+        color: #475569 !important;
+    }
+
+    /* DATAFRAME */
+    [data-testid="stDataFrame"] {
+        border: 1px solid #CBD5E1;
         border-radius: 8px;
-    }}
+    }
 
-    /* ------------------------------
-       DIVIDER
-    ------------------------------ */
+    /* DIVIDER */
+    hr {
+        border-color: #CBD5E1;
+    }
 
-    hr {{
-        border-color: {BORDER};
-    }}
-
-    /* ------------------------------
-       FOOTER
-    ------------------------------ */
-
-    .footer {{
+    /* FOOTER */
+    .footer {
         text-align: center;
-        color: {SLATE_GRAY};
+        color: #64748B;
         font-size: 0.8rem;
         margin-top: 2rem;
         padding-top: 1rem;
-        border-top: 1px solid {BORDER};
-    }}
+        border-top: 1px solid #CBD5E1;
+    }
 
     </style>
     """,
     unsafe_allow_html=True
 )
-
 
 # =========================================================
 # ECONOMIC ASSUMPTIONS
