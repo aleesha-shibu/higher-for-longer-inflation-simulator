@@ -208,10 +208,10 @@ savings_return = 0.05
 # SIDEBAR
 # =========================================================
 
-st.sidebar.markdown("## Simulation Inputs")
+st.sidebar.markdown("## Stimulation Inputs")
 
 st.sidebar.caption(
-    "Enter your starting financial position and simulation period."
+    "Enter your starting financial position and stimulation period."
 )
 
 st.sidebar.markdown("---")
@@ -233,7 +233,7 @@ savings = st.sidebar.number_input(
 )
 
 years = st.sidebar.number_input(
-    "Simulation Period (Years)",
+    "Stimulation Period (Years)",
     min_value=1,
     max_value=50,
     value=10,
@@ -243,8 +243,8 @@ years = st.sidebar.number_input(
 
 st.sidebar.markdown("---")
 
-run_simulation = st.sidebar.button(
-    "▶  Run Simulation",
+run_stimulation = st.sidebar.button(
+    "▶  Run Stimulation",
     use_container_width=True,
     type="primary"
 )
@@ -275,13 +275,13 @@ st.sidebar.caption(
 # =========================================================
 
 st.markdown(
-    '<div class="eyebrow">FINANCIAL SIMULATION MODEL</div>',
+    '<div class="eyebrow">FINANCIAL STIMULATION MODEL</div>',
     unsafe_allow_html=True
 )
 
 st.markdown(
     '<div class="hero-title">'
-    'Higher-for-Longer Debt & Inflation Simulator'
+    'Higher-for-Longer Debt & Inflation Stimulator'
     '</div>',
     unsafe_allow_html=True
 )
@@ -323,10 +323,10 @@ st.divider()
 
 
 # =========================================================
-# SIMULATION FUNCTION
+# STIMULATION FUNCTION
 # =========================================================
 
-def run_financial_simulation(debt, savings, years):
+def run_financial_stimulation(debt, savings, years):
 
     current_debt = debt
     current_savings = savings
@@ -379,17 +379,17 @@ def run_financial_simulation(debt, savings, years):
 
 
 # =========================================================
-# BEFORE SIMULATION
+# BEFORE STIMULATION
 # =========================================================
 
-if not run_simulation:
+if not run_stimulation:
 
     st.markdown(
         f"""
         <div class="info-card">
         <strong>Ready to simulate?</strong><br>
-        Enter your debt, savings and simulation period in the sidebar,
-        then click <strong>Run Simulation</strong> to generate the
+        Enter your debt, savings and stimulation period in the sidebar,
+        then click <strong>Run Stimulation</strong> to generate the
         financial projections.
         </div>
         """,
@@ -449,7 +449,7 @@ if not run_simulation:
         "Purpose": [
             "Initial inflation level",
             "Long-run inflation target",
-            "Upper simulation limit",
+            "Upper stimulation limit",
             "Annual debt growth",
             "Annual savings growth"
         ]
@@ -463,19 +463,19 @@ if not run_simulation:
 
     st.markdown(
         '<div class="footer">'
-        'Educational financial simulation · Not financial advice'
+        'Educational financial stimulation · Not financial advice'
         '</div>',
         unsafe_allow_html=True
     )
 
 
 # =========================================================
-# SIMULATION RESULTS
+# STIMULATION RESULTS
 # =========================================================
 
 else:
 
-    df = run_financial_simulation(
+    df = run_financial_stimulation(
         debt,
         savings,
         years
@@ -488,14 +488,14 @@ else:
     # =====================================================
 
     st.markdown(
-        '<div class="section-title">Simulation Results</div>',
+        '<div class="section-title">Stimulation Results</div>',
         unsafe_allow_html=True
     )
 
     st.caption(
         f"Projection based on ₹{debt:,.0f} starting debt, "
         f"₹{savings:,.0f} starting savings and a "
-        f"{years}-year simulation period."
+        f"{years}-year stimulation period."
     )
 
     # =====================================================
@@ -549,7 +549,7 @@ else:
     # =====================================================
 
     st.markdown(
-        '<div class="section-title">What the Simulation Shows</div>',
+        '<div class="section-title">What the Stimulation Shows</div>',
         unsafe_allow_html=True
     )
 
@@ -835,7 +835,7 @@ else:
     # =====================================================
 
     st.markdown(
-        '<div class="section-title">Year-by-Year Simulation</div>',
+        '<div class="section-title">Year-by-Year Stimulation</div>',
         unsafe_allow_html=True
     )
 
@@ -880,12 +880,12 @@ else:
     # METHODOLOGY
     # =====================================================
 
-    with st.expander("View Simulation Methodology"):
+    with st.expander("View Stimulation Methodology"):
 
         st.write(
             """
             The model projects debt and savings over the selected
-            simulation period.
+            stimulation period.
 
             **Debt:** grows annually using the assumed debt interest rate.
 
@@ -898,7 +898,7 @@ else:
             inflation to illustrate the effect of changing purchasing power.
 
             Because annual inflation includes a random component,
-            repeated simulations can produce slightly different results.
+            repeated stimulations can produce slightly different results.
             """
         )
 
@@ -909,7 +909,7 @@ else:
     st.markdown(
         '<div class="footer">'
         'Higher-for-Longer Debt & Inflation Simulator · '
-        'Educational financial simulation · Not financial advice'
+        'Educational financial stimulation · Not financial advice'
         '</div>',
         unsafe_allow_html=True
     )
